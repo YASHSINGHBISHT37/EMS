@@ -2,21 +2,24 @@ import React from 'react'
 import FullPage from './FullPage'
 import Nav from './components/navigation/Nav'
 import Footer from './components/navigation/Footer'
+import Search from './Search'
+import SideBar from './components/navigation/SideBar'
 
 export default function App() {
-  return (
-    <div className='w-screen min-h-screen relative overflow-y-hidden'>
-      <Nav />
 
-      <div className='px-90 pt-20'>
-        <h1 className='text-muted-text text-sm tracking-tight pl-4 mb-3 flex items-center gap-1'>
-        <i className="ph ph-house text-lg"></i>
-          
-          / Hackathon / Hacks 2026 – Hub for Advanced Creativity, Knowledge & Solutions</h1>
-        <FullPage />
+  return (
+    <div className='w-screen h-screen overflow-hidden flex gap-2 px-60 p-1 bg-transparent bg-linear-to-t from-blue-900 to-bg-muted-bg'>
+      <div className='border border-border-10 rounded-3xl h-full bg-bg w-70'>
+        <SideBar />
       </div>
 
-      <Footer />
+      <div className='border border-border-10 rounded-3xl h-full bg-bg flex-1 flex justify-center overflow-y-scroll scrollbar-hide py-4'>
+        <FullPage />
+      </div>
     </div>
   )
 }
+
+
+
+

@@ -27,7 +27,7 @@ export default function Nav() {
                                 <img src="/W.jpg" className='w-full h-full' />
                             </div>
                             <div>
-                                <h1 className='text-2xl font-bold whitespace-nowrap pr-2'>Ananya Charavarty</h1>
+                                <h1 className='text-2xl font-bold whitespace-nowrap pr-2'>Yash Singh Bisht</h1>
                                 <p className='text-muted-text text-xs leading-3'>yashbisht0007@gmail.com</p>
                             </div>
                         </div>
