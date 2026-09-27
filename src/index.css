@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/reg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "dot";
+  src: url("/fonts/Dot.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #FFFFFF;
+  --muted-bg: rgb(0, 0, 0, 0.03);
+
+  --text: #121212;
+  --accent: #fe330a;
+  --muted-text: rgba(18, 15, 18, 0.5);
+
+  --border-20: rgba(0, 0, 0, 0.2);
+  --border-10: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --bg: rgb(18, 18, 18);
+  --muted-bg: rgba(170, 163, 163, 0.03);
+
+  --text: #ECf1ff;
+  --accent: #fe330a;
+  --muted-text: rgba(255, 255, 255, 0.5);
+
+  --border-20: rgba(255, 255, 255, 0.05);
+  --border-10: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-muted-bg: var(--muted-bg);
+
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+  --color-muted-text: var(--muted-text);
+  --color-border-20: var(--border-20);
+  --color-border-10: var(--border-10);
+
+  --font-reg: "MyFont", Arial, Helvetica, sans-serif;
+  --font-dot: "Dot", sans-serif;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-reg), Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
