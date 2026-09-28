@@ -3,23 +3,29 @@ import React from 'react'
 export default function Nav() {
     const navOpt = ['Home', 'Hackathons', 'Blog']
 
-
-
     return (
-        <div className='w-full backdrop-blur-xl border border-border-10 items-center flex justify-between p-3 fixed top-0 left-0 px-94'>
-            <h1 className='font-bold text-3xl tracking-tighter'>MeeShee.</h1>
+        <div className='w-full fixed top-0 left-0 z-999999 flex items-center justify-center'>
+            <div className='w-7xl backdrop-blur-xs borde border-border-10 items-center flex justify-between p-3 '>
+                <h1 className='font-bold text-3xl tracking-tighter'>MeeShee.</h1>
 
-            <div className='flex gap-4'>
-                {navOpt.map((item, i) => (
-                    <h1 className='text-muted-text tracking-tight cursor-pointer'>{item}</h1>
-                ))}
-            </div>
-
-            <div className='flex items-center gap-3 relative'>
-                <div className='w-8 h-8 border border-border-20 rounded-full overflow-clip cursor-pointer'>
-                    <img src="/W.jpg" className='w-full h-full' />
+                <div className='flex gap-4'>
+                    {navOpt.map((item, i) => (
+                        <h1 className='text-muted-text tracking-tight cursor-pointer'>{item}</h1>
+                    ))}
                 </div>
-                <div className='w-auto border border-border-10 rounded-3xl absolute top-10 left-1/2 -translate-x-1/2 bg-bg p-4'>
+
+                <div className='border border-border-10 rounded-full p-2 w-xs px-3 text-sm flex items-center gap-2'>
+                    <i className='ph ph-magnifying-glass text-xl'></i>
+                    <input className='outline-0 w-full' type="text" placeholder='Search...' />
+                    <i className='ph ph-x text-lg text-muted-text cursor-pointer'></i>
+                </div>
+
+                <div className='flex items-center gap-4 relative'>
+                    <i className='ph ph-bell text-2xl'></i>
+                    <div className='w-10 h-10 border border-border-20 rounded-full overflow-clip cursor-pointer'>
+                        <img src="/W.jpg" className='w-full h-full' />
+                    </div>
+                    {/* <div className='w-auto border border-border-10 rounded-3xl absolute top-10 left-1/2 -translate-x-1/2 bg-bg p-4'>
 
                     <div className='px-'>
                         <div className='flex items-center gap-3'>
@@ -68,6 +74,7 @@ export default function Nav() {
                         <i className="ph ph-sign-out scale-x-[-1] text-md"></i>
                         <p className=' tracking-tight text-sm'>Logout</p>
                     </div>
+                </div> */}
                 </div>
             </div>
         </div>

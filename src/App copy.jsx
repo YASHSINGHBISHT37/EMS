@@ -1,5 +1,5 @@
 import React from 'react'
-import FullPage from './FullPage'
+import FullPage from './pages/FullPage'
 import Nav from './components/navigation/Nav'
 import Footer from './components/navigation/Footer'
 import Search from './Search'
