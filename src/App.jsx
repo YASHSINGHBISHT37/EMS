@@ -6,22 +6,35 @@ import Footer from './components/navigation/Footer'
 import Search from './Search'
 import Create from './pages/Create'
 import Dashboard from './pages/Dashboard'
+import Blog from './pages/Blog'
+import Login from './pages/Login'
+import DetailPage from './pages/DetailPage'
 
 export default function App() {
   return (
-    <div className='w-screen h-screen overflow-hidden flex gap-2 p- bg-transparent bg-linear-to-t from-blue-900 to-bg-muted-bg'>
+    <div className='w-screen h-screen overflow-hidden flex gap-2 bg-[#161616'>
       <Nav />
+      {/* <Login/> */}
 
-      <div className='bg-b border border-border-10 rounde h-full flex-1 flex flex-col items-center overflow-y-scroll scrollbar-hide pb-4 relative pt-16'>
-        <div className='w-7xl bg-bg rounded-3xl'>
+      {/* <Blog/> */}
+
+      <div className='bg-b h-full flex-1 flex flex-col items-center overflow-y-scroll scrollbar-hide relative'>
+        <div className='w-full bg-white'>
           <Routes>
-            <Route path='/' element={<FullPage />} />
+            {/* <Route path='/' element={<FullPage />} /> */}
+            <Route path='/' element={<DetailPage />} />
             <Route path='/create' element={<Create />} />
             <Route path='/search' element={<Search />} />
             <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/blog' element={<Blog />} />
           </Routes>
         </div>
+
+        {/* <DetailPage/> */}
+
       </div>
+      {/* <Footer/> */}
+
     </div>
   )
 }

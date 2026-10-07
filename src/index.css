@@ -18,13 +18,26 @@
   font-display: swap;
 }
 
+/* :root {
+  --bg: black;
+  --muted-bg: rgba(255, 255, 255, 0.09);
+
+  --text: #ECf1ff;
+  --accent: #155DFC ;
+  --muted-text: rgba(255, 255, 255, 0.5);
+
+  --border-20: rgba(255, 255, 255, 0.05);
+  --border-10: rgba(255, 255, 255, 0.1);
+} */
+
+
 :root {
   --bg: #FFFFFF;
   --muted-bg: rgb(0, 0, 0, 0.03);
 
   --text: #121212;
-  --accent: #fe330a;
-  --muted-text: rgba(18, 15, 18, 0.5);
+  --accent: #155DFC;
+  --muted-text: rgba(18, 15, 18, 0.6);
 
   --border-20: rgba(0, 0, 0, 0.2);
   --border-10: rgba(0, 0, 0, 0.1);
@@ -35,7 +48,7 @@
   --muted-bg: rgba(170, 163, 163, 0.03);
 
   --text: #ECf1ff;
-  --accent: #fe330a;
+  --accent: #155DFC ;
   --muted-text: rgba(255, 255, 255, 0.5);
 
   --border-20: rgba(255, 255, 255, 0.05);
