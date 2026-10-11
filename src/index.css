@@ -30,9 +30,32 @@
   --border-10: rgba(255, 255, 255, 0.1);
 } */
 
+.details-content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.details-content p {
+  margin: 0 0 1rem;
+}
+
+.details-content ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: -0.25rem 0 1rem;
+}
+
+.details-content li {
+  margin-bottom: 0.4rem;
+}
+
+.details-content strong {
+  color: #222;
+}
 
 :root {
-  --bg: #FFFFFF;
+  --bg: #F7F8F9;
   --muted-bg: rgb(0, 0, 0, 0.03);
 
   --text: #121212;
@@ -41,6 +64,8 @@
 
   --border-20: rgba(0, 0, 0, 0.2);
   --border-10: rgba(0, 0, 0, 0.1);
+
+  --warn: rgb(193, 0, 7);
 }
 
 .dark {
@@ -48,7 +73,7 @@
   --muted-bg: rgba(170, 163, 163, 0.03);
 
   --text: #ECf1ff;
-  --accent: #155DFC ;
+  --accent: #155DFC;
   --muted-text: rgba(255, 255, 255, 0.5);
 
   --border-20: rgba(255, 255, 255, 0.05);
@@ -67,6 +92,8 @@
 
   --font-reg: "MyFont", Arial, Helvetica, sans-serif;
   --font-dot: "Dot", sans-serif;
+
+  --color-warn:var(--warn)
 }
 
 .scrollbar-hide {

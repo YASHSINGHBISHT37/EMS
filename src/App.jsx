@@ -12,14 +12,14 @@ import DetailPage from './pages/DetailPage'
 
 export default function App() {
   return (
-    <div className='w-screen h-screen overflow-hidden flex gap-2 bg-[#161616'>
+    <div className='w-screen h-screen overflow-hidden flex gap-2 '>
       <Nav />
       {/* <Login/> */}
 
       {/* <Blog/> */}
 
       <div className='bg-b h-full flex-1 flex flex-col items-center overflow-y-scroll scrollbar-hide relative'>
-        <div className='w-full bg-white'>
+        <div className='w-full bg-[#F7F8F9]'>
           <Routes>
             {/* <Route path='/' element={<FullPage />} /> */}
             <Route path='/' element={<DetailPage />} />
@@ -28,13 +28,13 @@ export default function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/blog' element={<Blog />} />
           </Routes>
+          <Footer />
         </div>
 
         {/* <DetailPage/> */}
 
       </div>
       {/* <Footer/> */}
-
     </div>
   )
 }

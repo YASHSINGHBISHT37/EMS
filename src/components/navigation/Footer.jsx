@@ -1,50 +1,72 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 export default function Footer() {
-    const navs = [
-        { head: 'Community', navs: ['About', 'Blog', 'Privacy', 'Terms'] },
-        { head: 'Connect', navs: ['Email', 'Blog', 'Privacy', 'Terms'] },
-        { head: 'Support', navs: ['Contact', 'About Us', 'Privacy Policy', 'Terms of Service'] },
+    const footerLinks = [
+        {
+            header: "Navigation",
+            links: [
+                { name: "Home", href: "/" },
+                { name: "IPU Result", href: "/ipu-result" },
+                { name: "Leaderboard", href: "/leaderboard" },
+                { name: "Study Resources", href: "/study-resources" },
+            ],
+        },
+        {
+            header: "Support",
+            links: [
+                { name: "Contact", href: "/Contact" },
+                { name: "About Us", href: "/About" },
+                { name: "Privacy Policy", href: "/Privacy" },
+                { name: "Terms of Service", href: "/Terms" },
+            ],
+        },
+        {
+            header: "Connect",
+            links: [
+                { name: "Email", href: "mailto:yashbisht0007@gmail.com" },
+                { name: "Github", href: "https://github.com/yourusername" },
+                { name: "Linkedin", href: "https://linkedin.com/in/yourusername" },
+                { name: "Instagram", href: "https://instagram.com/yourusername" },
+            ],
+        },
     ]
 
-    const menu = ['Home', 'About', 'Contact Us', 'Privacy', 'Terms']
-
     return (
-        <div className='w-full p-10 pb-0 flex flex-col bg-muted-bg relative z-99999999 overflow-clip'>
+        <div className='w-full flex rounded-t-4xl bg-muted-bg flex-col items-center justify-center border-t border-border-10 mt-4'>
+            <div className='w-7xl flex flex-col gap-30 pt-10 pb-4'>
 
-            <div className='flex items-end justify-between pb-20'>
-                <div className='flex items-center gap-30'>
-                    <div className='flex flex-col gap-6'>
-                        <h1 className='text-lg'>Menu</h1>
-
-                        <div>
-                            {menu.map((item, i) => (
-                                <p className='text-muted-text tracking-tight text-xl leading-6'>{item}</p>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col gap-6'>
-                        <h1 className='text-lg'>Contact</h1>
-
-                        <div>
-                            {menu.map((item, i) => (
-                                <p className='text-muted-text tracking-tight text-xl leading-6'>{item}</p>
-                            ))}
-                        </div>
-
-                        
+                <div className="flex justify-end w-full gap-30 text-right">
+                    <div className="flex gap-20">
+                        {footerLinks.map((item, i) => (
+                            <div key={i} className="flex flex-col gap-3">
+                                <h1 className="font-bold text-xl">{item.header}</h1>
+                                <div className="flex flex-col text-text/70">
+                                    {item.links.map((link, j) => (
+                                        <Link key={j} to={link.href} className="cursor-pointer pointer-events-auto leading-5.5">{link.name}</Link>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-                <div className='flex items-center gap-3 text-muted-text text-sm tracking-tight'>
-                    <p>Cookie Policy</p>
-                    <p>Privacy Policy</p>
-                    <p>©2026 All Copyrights Reserved by SquareOne</p>
+                <div className="flex">
+                    <h1 className="text-[26vh] font-dot tracking-tight leading-60 font-bold bg-linear-to-tr from-text via-accent to-text bg-clip-text text-transparent">SquareOne.</h1>
+                    <span className="text-5xl text-accent">®</span>
                 </div>
             </div>
 
-            <h1 className='text-[24vh] font-bold tracking-tighter text-center leading-50'>SquareOne.</h1>
+            <div className='border-t border-border-10 h-14 w-full flex items-center justify-center'>
+                <div className='w-7xl flex items-center justify-between h-full text-right text-text/70 text-sm'>
+                    <div className='flex items-center gap-5'>
+                        <p>Cookie Policy</p>
+                        <p>Terms</p>
+                        <p className=''>Privacy Policy</p>
+                    </div>
+                    <p>©2026 SquareOne All rights Reserved.</p>
+                </div>
+            </div>
 
         </div>
     )

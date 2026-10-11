@@ -12,13 +12,7 @@ function RichEditor() {
 
     const editor = useEditor({
         extensions: [
-            StarterKit,
-            Superscript,
-            Subscript,
-            Image,
-            TextAlign.configure({ types: ['paragraph', 'heading'] }),
-        ],
-        shouldRerenderOnTransaction: true,
+            StarterKit, Superscript, Subscript, Image, TextAlign.configure({ types: ['paragraph', 'heading'] }),], shouldRerenderOnTransaction: true,
         editorProps: {
             attributes: {
                 class: 'h-100 max-h-120 overflow-y-auto p-4 text-sm outline-none [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_img]:max-w-full [&_img]:rounded-xl [&_img]:my-2',
@@ -448,12 +442,10 @@ export default function Blog() {
                     <Banner />
                 )}
 
-                 {/* BANNER/ THEME */}
-                 {active === 'FAQs' && (
+                {/* BANNER/ THEME */}
+                {active === 'FAQs' && (
                     <FAQs />
                 )}
-
-
 
                 {active === 'Prizes' && (
                     <div className='w-full flex flex-col gap-2'>
