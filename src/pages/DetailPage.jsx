@@ -126,7 +126,6 @@ function Organiser() {
 function Section({ item }) {
     switch (item.head) {
 
-
         case 'Rounds & Stages':
             return <Rounds />
 

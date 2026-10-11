@@ -109,6 +109,16 @@ function Basic() {
                         <input type="text0" className={input} placeholder='Enter Event, Compititions, Hackathon.....' />
                         <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
                     </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Location <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='Enter Event, Compititions, Hackathon.....' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Company Website URL <span className='text-warn'>*</span></h1>
+                        <input type="text0" classsName={input} placeholder='Enter Event, Compititions, Hackathon.....' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
                 </div>
             </div>
 
@@ -137,13 +147,9 @@ function Basic() {
                 <div className='borde border-dashed p- rounded-2xl border-accent h- flex flex-col gap-6 bg-muted-b p-6 bg-muted-bg border'>
                     <ToxEditer />
                 </div>
-
-
-
             </div>
 
             <div className='w-full border-t border-border-10'></div>
-
 
             <div className='flex flex-col gap-4'>
                 <div>
@@ -151,7 +157,7 @@ function Basic() {
                     <p className='text-xs tracking-wide text-muted-text'>Add important dates in this section like round start and end dates, Grand Finale date, etc. (max. 15)</p>
                 </div>
 
-                <div className='w-full px-20'>
+                <div className='w-full'>
                     <div className=' border border-accent rounded-2xl border-dashed bg-muted-bg p-6 flex flex-col gap-6'>
                         <div>
                             <p className='mb-2 text-sm'>Participation Type</p>
@@ -208,6 +214,21 @@ function Basic() {
                                 <div className='cursor-pointer flex items-center justify-center gap-1 border rounded-xl text-sm bg-bg h-10 px-3 outline-0 border-accent/30 border-dashed'>
                                     <i className='ph ph-user'></i>
                                     <h1 className='px-1 text-xs'>Hybrid</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className='flex items-center gap-4 '>
+                                <div className='flex flex-col w-full'>
+                                    <p className='mb-2 px-1 text-sm'>Location</p>
+                                    <input type="text" placeholder='Enter address of the location where your event will be held' className='outline-0 h-10 bg-bg border border-dashed rounded-xl px-3 text-sm border-accent/30 w-full' />
+                                </div>
+
+
+                                <div className='flex flex-col w-full'>
+                                    <p className='mb-2 px-1 text-sm'>City</p>
+                                    <input type="text" placeholder='select city' className='outline-0 h-10 bg-bg border border-dashed rounded-xl px-3 text-sm border-accent/30 w-full' />
                                 </div>
                             </div>
                         </div>
@@ -414,6 +435,153 @@ function AddInfo() {
     )
 }
 
+function Dates() {
+    return (
+        <div className='flex flex-col gap-6 px-20'>
+
+
+
+            <div className=' border border-dashed p-6 rounded-2xl border-accent flex-col bg-muted-bg grid grid-cols-2 gap-6'>
+                <div className='flex items-center gap-3'>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Applications Open <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='DD/MM/YY' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Timing <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='HH:MM(24hrs)' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                </div>
+                <div className='flex items-center gap-3'>
+
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Applications Close <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='DD/MM/YY' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Timing <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='HH:MM(24hrs)' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className=' border border-dashed p-6 rounded-2xl border-accent flex-col bg-muted-bg grid grid-cols-2 gap-6'>
+                <div className='flex items-center gap-3'>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Event Open <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='DD/MM/YY' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Timing <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='HH:MM(24hrs)' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                </div>
+                <div className='flex items-center gap-3'>
+
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Event Close <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='DD/MM/YY' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Timing <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='HH:MM(24hrs)' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className=' border border-dashed p-6 rounded-2xl border-accent h- flex flex-col bg-muted-bg'>
+                <div className='grid grid-cols-2 gap-6'>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Announcement of Results <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='DD/MM/YY' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                    <div className='flex-1'>
+                        <h1 className='px-1 text-sm mb-1'>Timing <span className='text-warn'>*</span></h1>
+                        <input type="text0" className={input} placeholder='HH:MM(24hrs)' />
+                        <p className='text-warn text-xs px-1 pt-0.5 hidden'>Minimum 3 characters in title is required</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    )
+}
+
+const theme = ['#121212', '#161616']
+
+function Banner() {
+    return (
+        <div className='borde flex flex-col gap-8 '>
+
+            <div className='flex items-center gap-6'>
+                <div className='flex-1'>
+                    <div className='flex items-center justify-between text-sm mb-1 px-1'>
+                        <h1 className=''>Banner for web / Thumbnail</h1>
+                        <h1 className=' text-muted-text text-xs'>1920x600</h1>
+                    </div>
+
+                    <div className='w-full h-60 border bg-muted-bg/50 rounded-2xl border-dashed border-accent p-0.5 cursor-pointer'></div>
+                </div>
+
+                <div className=''>
+                    <div className='flex items-center justify-between text-sm mb-1 px-1'>
+                        <h1 className=''>Logo</h1>
+                        <h1 className=' text-muted-text text-xs'>600x600</h1>
+                    </div>
+
+                    <div className='h-60 aspect-square border bg-muted-bg/50 rounded-2xl border-dashed border-accent p-0.5 cursor-pointer'></div>
+                </div>
+            </div>
+
+            <div className='w-full border-t border-border-10'></div>
+
+            <div className='flex flex-col gap-2'>
+                <div>
+                    <h1 className='tracking-tight text-xl'>Theme Color</h1>
+                    {/* <p className='text-xs tracking-wide text-muted-text'>Add details of the person (name, email, and phone) to help candidates with queries during the process.</p> */}
+                </div>
+
+                <div className=' border border-dashed p-6 rounded-2xl border-accent h- flex flex-col gap-6 bg-muted-bg'>
+                    <div className='flex items-center gap-6'>
+
+                        <div className='flex-1'>
+                            <h1 className='px-1 text-sm mb-1'>Theme color <span className='text-warn'>*</span></h1>
+                            <div className='flex items-center gap-2'>
+                                {theme.map((item, i) => (
+                                    <div className='w-10 h-10 border rounded-full border-dashed border-accent p-0.5 cursor-pointer'>
+                                        <div style={{ background: item }} className='w-full h-full rounded-full'></div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className='w-xs'>
+                            <h1 className='px-1 text-sm mb-1'>Use Hex Code</h1>
+                            <div className='flex items-center border border-dashed border-accent/30 rounded-xl bg-bg h-10 gap-2 overflow-clip justify-between'>
+                                <h1 className='w-10 text-center border-r border-accent/30 border-dashed h-full flex items-center justify-center'>#</h1>
+                                <input type="text" className='flex-1 outline-0 tracking-wide' placeholder='121212' />
+                                <h1 className='w-10 bg-amber-400 text-center border-l border-accent/30 border-dashed h-full flex items-center justify-center'></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
 /* ---------------- Section content (by heading) ---------------- */
 function Section({ item }) {
     switch (item.head) {
@@ -423,6 +591,12 @@ function Section({ item }) {
 
         case 'Rounds':
             return <Rounds />
+
+        case 'Dates & Deadlines':
+            return <Dates />
+
+        case 'Banner':
+            return <Banner />
 
         case 'Additional Info':
             return <AddInfo />
@@ -459,7 +633,12 @@ const bar = [
     {
         head: 'Dates & Deadlines',
         code: 'Dates & Deadlines',
-        sub: 'Provide '
+        sub: 'Add important dates in this section like event application start and end dates, Announcement  date, etc.'
+    },
+    {
+        head: 'Banner',
+        code: 'Banner',
+        sub: 'Default banners will be applied if no custom desktop or mobile banners are uploaded. You can update them anytime and choose from available color themes.'
     },
     {
         head: 'Additional Info',
