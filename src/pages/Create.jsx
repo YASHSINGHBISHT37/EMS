@@ -478,23 +478,24 @@ export default function Create() {
     const current = bar.find((b) => b.code === active)
 
     return (
-        <div className="w-full flex flex-col items-center ">
+        <div className="w-full flex flex-col items-center min-h-screen">
 
             {/* SECTIONS BAR */}
             <div className='border-y w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
                 {bar.map((item) => {
                     const isActive = active === item.code
                     return (
-                        <div
-                            key={item.code}
-                            onClick={() => { setActive(item.code); window.scrollTo({ top: 0 }) }}
-                            className='relative group cursor-pointer hover:bg-muted-bg transition-all ease-in-out duration-200 p-2 px-3 rounded-xl'
-                        >
+                        <div key={item.code} onClick={() => { setActive(item.code); window.scrollTo({ top: 0 }) }}
+                            className='relative group cursor-pointer hover:bg-muted-bg transition-all ease-in-out duration-200 p-2 px-3 rounded-xl'>
                             <h1 className={`relative cursor-pointer tracking-wide transition-colors text-sm ${isActive ? 'text-accent' : 'text-muted-text'}`}>{item.code}</h1>
                             <div className={`w-full bg-accent h-0.5 rounded-full absolute left-0 -bottom-1.5 origin-center transition-transform duration-300 ${isActive ? 'scale-x-100' : 'scale-x-0'}`}></div>
                         </div>
                     )
                 })}
+                <div className=' p- flex items-center gap-2 ml-10'>
+                    <h1 className='font-dot font-bold'>20%</h1>
+                    <button className='bg-accent text-bg p-1 px-2 text-sm rounded-lg'>Live It</button>
+                </div>
             </div>
 
             <div className="w-full max-w-7xl mt-30 flex flex-col items-center">
@@ -514,7 +515,7 @@ export default function Create() {
                             )}
                         </div>
 
-                        <div className='px-20'>
+                        <div className='px'>
                             <Section item={current} />
                         </div>
                     </div>
