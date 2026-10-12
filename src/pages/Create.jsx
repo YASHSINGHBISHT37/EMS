@@ -652,6 +652,17 @@ const bar = [
     },
 ]
 
+const icons = {
+    'Basic Details': 'ph-pencil-simple',
+    'Rounds': 'ph-path',
+    'Prize & Rewards': 'ph-trophy',
+    'Eligiblity': 'ph-',
+    'Dates & Deadlines': 'ph-',
+    'Banner': 'ph-',
+    'Additional Info': 'ph-',
+    'FAQs': 'ph-',
+}
+
 export default function Create() {
     const [active, setActive] = useState('Basic')
     const current = bar.find((b) => b.code === active)
@@ -660,7 +671,7 @@ export default function Create() {
         <div className="w-full flex flex-col items-center min-h-screen">
 
             {/* SECTIONS BAR */}
-            <div className='border-b w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
+            {/* <div className='border-b w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
                 {bar.map((item) => {
                     const isActive = active === item.code
                     return (
@@ -675,11 +686,48 @@ export default function Create() {
                     <h1 className='font-dot font-bold'>20%</h1>
                     <button className='bg-accent text-bg p-1 px-2 text-sm rounded-lg'>Live It</button>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="w-full max-w-7xl mt-30 flex flex-col items-center">
+            <div className="w-full max-w-6xl mt-24 flex gap-10">
+                <div className='flex flex-col gap-6 sticky top-26 w-70 h-auto'>
+
+                    <div className='flex flex-col items-center'>
+                        <h1 className="text-8xl font-dot tracking-tight font-bold bg-linear-to-tr from-text via-accent to-text bg-clip-text text-transparent">21%</h1>
+                    </div>
+
+                    {/* <div className='border border-border-10 rounded-2xl bg-muted-bg flex flex-col p-2 flex-1 backdrop-blur-xl'>
+                        {bar.map((item) => {
+                            const isActive = active === item.code
+                            return (
+                                <div key={item.code} onClick={() => { setActive(item.code); window.scrollTo({ top: 0 }) }}
+                                    className='relative flex items-center gap-2 group cursor-pointer hover:bg-muted-bg transition-all ease-in-out duration-200 p-2 px-3 rounded-xl'>
+                                    <i className={`ph ${icons[item.head] || 'ph-circle'} ${isActive ? 'text-accent' : 'text-muted-text'}`}></i>
+                                    <h1 className={`relative cursor-pointer tracking-wide transition-colors text-sm ${isActive ? 'text-accent' : 'text-muted-text'}`}>{item.code}</h1>
+                                </div>
+                            )
+                        })}
+                    </div> */}
+
+                    <div className=' flex flex-col gap-2 px-8'>
+                        {bar.map((item, i) => {
+                            const isActive = active === item.code
+                            return (
+                                <div key={item.code} onClick={() => { setActive(item.code); window.scrollTo({ top: 0 }) }}className='relative flex items-center gap-2 group cursor-pointer'>
+                                    <div className='w-9 h-9 bg-accent/20 p-0.5 rounded-full flex items-center justify-center relative'>
+                                        <div className='text-bg rounded-full bg-accent w-full h-full flex z-1 items-center justify-center font-dot font-bold text-4xl'>{i + 1}</div>
+                                        <div className={` border-dashed border-accent/50 h-10 rounded-full absolute left-1/2 top-1/2 ${i === bar.length - 1 ? '' : 'border'}`}></div>
+                                    </div>
+                                    <h1 className={`relative cursor-pointer tracking-wide transition-colors text-sm leading-4 ${isActive ? 'text-accent' : 'text-muted-text'}`}>{item.code}</h1>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <p className='border w-full p-1 rounded-xl border-border-10 flex items-center justify-center bg-accent text-bg font-bold font-dot text-2xl'> Done</p>
+
+                </div>
+
                 <div className='relative w-5xl'>
-                    <div key={current.code} className='flex flex-col gap-4 py-8'>
+                    <div key={current.code} className='flex flex-col gap-4'>
                         <div className='flex justify-between'>
                             <div>
                                 <h1 className='font-bold text-2xl'>{current.head}</h1>

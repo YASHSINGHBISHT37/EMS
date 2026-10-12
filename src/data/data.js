@@ -1,5 +1,5 @@
 export const data = {
-  "bannerImg": "banner.webp",
+  bannerImg: "banner.webp",
   "logoImg": "W.jpg",
   "theme": '#960D5B',
 

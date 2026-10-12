@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import DetailPage from './pages/DetailPage'
 import Discover from './pages/Discover'
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path='/discover' element={<Discover />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/blog' element={<Blog />} />
+            <Route path='/profile' element={<Profile />} />
           </Routes>
           <Footer />
         </div>

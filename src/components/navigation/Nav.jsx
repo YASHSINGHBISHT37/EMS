@@ -7,6 +7,7 @@ const NAV_OPTS = [
     { label: 'Discover', to: '/discover' },
     { label: 'Dashboard', to: '/dashboard' },
     { label: 'Blog', to: '/blog' },
+    { label: 'Profile', to: '/profile' },
 ]
 
 export default function Nav() {
@@ -34,11 +35,6 @@ export default function Nav() {
                             )
                         })}
                     </div>
-
-                    <div className='bg-linear-to-tr from- via-accent to-text p-1 rounded-full px-3 flex items-center gap-1 text-bg text-sm cursor-pointer'>
-                        <i className='ph ph-plus'></i>
-                        <h1 className="tracking-tigh">Create</h1>
-                    </div>
                 </div>
 
                 <div className='flex items-center gap-2 relative w-60 justify-end'>
@@ -47,13 +43,12 @@ export default function Nav() {
                     {/* <div className='border border-border-10 bg-accent h-full p-1 cursor-pointer text-bg rounded-full text-sm px-4'><p>Login</p></div> */}
                     {/* <div cl assName='border border-accent border-dashed h-full p-1 cursor-pointer bg-muted-bg rounded-full text-sm px-4'><p>Signin</p></div> */}
 
-                    {/* <div className='bg-linear-to-tr from- via-accent to-text p-1 rounded-full px-3 flex items-center gap-1 text-bg text-sm cursor-pointer'>
+                    <div className='bg-linear-to-tr from- via-accent to-text p-1 rounded-full px-3 flex items-center gap-1 text-bg text-sm cursor-pointer'>
                         <i className='ph ph-plus'></i>
                         <h1 className="tracking-tigh">Create</h1>
-                    </div> */}
+                    </div>
 
-                    <div className='flex justify-end gap-3 w-60'>
-                        
+                    {/* <div className='flex justify-end gap-3 w-60'>
                         <div className='flex flex-col text-right'>
                             <h1 className='font-bold text-lg'>Yash Singh Bisht</h1>
                             <p className='text-muted-text text-xs leading-2'>Yashbisht0007@gmail.com</p>
@@ -62,7 +57,7 @@ export default function Nav() {
                         <div className='w-10 h-10 border border-border-20 rounded-full overflow-clip cursor-pointer' onClick={() => setProfileOpen((prev) => !prev)}>
                             <img src="/W.jpg" className='w-full h-full' />
                         </div>
-                    </div>
+                    </div> */}
 
                     {profileOpen && (
                         <>

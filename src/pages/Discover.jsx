@@ -104,10 +104,10 @@ export default function Discover() {
 
   return (
     <div className='w-full flex items-center justify-center'>
-      <div className='w-full max-w-7xl mt-20 flex gap-6 items-start min-h-screen'>
+      <div className='w-full max-w-7xl mt-20 flex flex-col gap-6 items-center min-h-screen'>
 
         {/* FILTERS */}
-        <div className='sticky top-24 border w-80 shrink-0 rounded-3xl bg-muted-bg border-border-10 p-4 flex flex-col gap-5'>
+        {/* <div className='sticky top-24 border w-80 shrink-0 rounded-3xl bg-muted-bg border-border-10 p-4 flex flex-col gap-5'>
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -122,9 +122,13 @@ export default function Discover() {
           <button type='button' onClick={reset} className='text-xs text-accent w-fit cursor-pointer'>
             Reset filters
           </button>
+        </div> */}
+
+        <div className=' border border-border-10 rounded-full p-1 w-5xl bg-muted-bg'>
+          <input type="text" />
         </div>
 
-        <div></div>
+        {/* <div></div> */}
 
         {/* EVENTS */}
         <div className='grid grid-cols-2 gap-6'>
