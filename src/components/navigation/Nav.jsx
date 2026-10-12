@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 const NAV_OPTS = [
     { label: 'Home', to: '/' },
     { label: 'Create', to: '/create' },
-    { label: 'Search', to: '/search' },
+    { label: 'Discover', to: '/discover' },
     { label: 'Dashboard', to: '/dashboard' },
     { label: 'Blog', to: '/blog' },
 ]
@@ -14,28 +14,43 @@ export default function Nav() {
     const [profileOpen, setProfileOpen] = useState(false)
 
     return (
-        <div className='w-full fixed top-0 left-0 z-999999 flex flex-col items-center justify-center bg-[#F7F8F9] backdrop-blur-xs borde border-border-10'>
+        <div className='w-full fixed top-0 left-0 z-999999 flex flex-col items-center border h-16 justify-center bg-[#F7F8F9] backdrop-blur-xs borde border-border-10'>
 
-            <div className='w-7xl items-center flex justify-between p-3 relative z-10'>
+            <div className='w-7xl items-center flex justify-between p-3 relative z-10 h-full'>
 
-                <div className="flex w-60">
-                    <h1 className="text-3xl font-dot tracking-tight font-bold bg-linear-to-tr from-text via-accent to-text bg-clip-text text-transparent">SquareOne</h1>
-                    <span className="text-lg text-accent">®</span>
+                <div className='flex items-center'>
+                    <div className="flex w-60">
+                        <h1 className="text-3xl font-dot tracking-tight font-bold bg-linear-to-tr from-text via-accent to-text bg-clip-text text-transparent">SquareOne</h1>
+                        <span className="text-lg text-accent">®</span>
+                    </div>
+
+                    <div className='flex gap-3  '>
+                        {NAV_OPTS.map((item) => {
+                            const isActive = location.pathname === item.to
+                            return (
+                                <Link key={item.label} to={item.to} className={`text-sm cursor-pointer transition-colors ${isActive ? 'text-accent font-medium' : 'text-muted-text hover:text-text'}`}>
+                                    {item.label}
+                                </Link>
+                            )
+                        })}
+                    </div>
+
+                    <div className='bg-linear-to-tr from- via-accent to-text p-1 rounded-full px-3 flex items-center gap-1 text-bg text-sm cursor-pointer'>
+                        <i className='ph ph-plus'></i>
+                        <h1 className="tracking-tigh">Create</h1>
+                    </div>
                 </div>
 
-                <div className='flex gap-3  '>
-                    {NAV_OPTS.map((item) => {
-                        const isActive = location.pathname === item.to
-                        return (
-                            <Link key={item.label} to={item.to} className={`text-sm cursor-pointer transition-colors ${isActive ? 'text-accent font-medium' : 'text-muted-text hover:text-text'}`}>
-                                {item.label}
-                            </Link>
-                        )
-                    })}
-                </div>
-
-                <div className='flex items-center gap-4 relative'>
+                <div className='flex items-center gap-2 relative w-60 justify-end'>
                     {/* <i className='ph ph-bell text-xl cursor-pointer'></i> */}
+
+                    {/* <div className='border border-border-10 bg-accent h-full p-1 cursor-pointer text-bg rounded-full text-sm px-4'><p>Login</p></div> */}
+                    {/* <div cl assName='border border-accent border-dashed h-full p-1 cursor-pointer bg-muted-bg rounded-full text-sm px-4'><p>Signin</p></div> */}
+
+                    {/* <div className='bg-linear-to-tr from- via-accent to-text p-1 rounded-full px-3 flex items-center gap-1 text-bg text-sm cursor-pointer'>
+                        <i className='ph ph-plus'></i>
+                        <h1 className="tracking-tigh">Create</h1>
+                    </div> */}
 
                     <div className='flex justify-end gap-3 w-60'>
                         

@@ -660,7 +660,7 @@ export default function Create() {
         <div className="w-full flex flex-col items-center min-h-screen">
 
             {/* SECTIONS BAR */}
-            <div className='border-y w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
+            <div className='border-b w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
                 {bar.map((item) => {
                     const isActive = active === item.code
                     return (

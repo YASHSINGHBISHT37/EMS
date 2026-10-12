@@ -188,7 +188,7 @@ export default function DetailPage() {
         <div className="w-full flex flex-col items-center ">
 
             {/* SECTIONS BAR */}
-            <div className='border-y w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
+            <div className='border-b w-full border-border-10 flex items-center justify-center p-2 fixed top-16 z-99 left-1/2 -translate-x-1/2 backdrop-blur-xl h-12'>
                 <div onClick={() => goTo('Home')} className='relative group cursor-pointer hover:bg-muted-bg transition-all ease-in-out duration-200 p-1.5 px-3 rounded-xl'>
                     <i style={active ? { color: data.theme } : undefined} className={`ph ph-house relative text-xl transition-colors ${active === 'Home' ? 'text-accent' : 'text-muted-text'}`}></i>
                     <div style={{ background: data.theme }} className={`w-full h-0.5 rounded-full bg-accent absolute left-0 -bottom-1.5 origin-center transition-transform duration-300 ${active === 'Home' ? 'scale-x-100' : 'scale-x-0'}`}></div>

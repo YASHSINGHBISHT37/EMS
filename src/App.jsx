@@ -1,14 +1,12 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import FullPage from './pages/FullPage'
 import Nav from './components/navigation/Nav'
 import Footer from './components/navigation/Footer'
-import Search from './Search'
 import Create from './pages/Create'
 import Dashboard from './pages/Dashboard'
 import Blog from './pages/Blog'
-import Login from './pages/Login'
 import DetailPage from './pages/DetailPage'
+import Discover from './pages/Discover'
+import Login from './pages/Login'
 
 export default function App() {
   return (
@@ -24,7 +22,7 @@ export default function App() {
             {/* <Route path='/' element={<FullPage />} /> */}
             <Route path='/' element={<DetailPage />} />
             <Route path='/create' element={<Create />} />
-            <Route path='/search' element={<Search />} />
+            <Route path='/discover' element={<Discover />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/blog' element={<Blog />} />
           </Routes>
